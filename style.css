@@ -1,0 +1,124 @@
+/* universal selector used to select whole html docs for styling . rarely used not best for real lyf website  */
+*{
+font-family: 'Courier New';
+}
+/* element selector */
+h3{
+    color: purple;
+}
+h1{
+    color: #b92b27;
+}
+/* id selector */
+#login{
+    background-color: white;
+}
+#signup{
+    background-color: #b92b27;
+    color: white;
+}
+/* class selector */
+.upvote{
+    background-color: green;
+    color: aliceblue;
+}
+/* descendant selector .this will apply color to all a tag inside p including last paragraph*/
+/* p a{
+    color: purple;
+    background-color: yellow;
+} */
+/* to remove style applied in google tag. we can use concept of class selector and descendant selector */
+.post a{
+    color: purple;
+    background-color: yellow;
+}
+/* we can even appply DS to multiple level. this will style to points */
+nav ul li{
+    color: hotpink;
+}
+/* 4 level of DS.this will srtle anchor tag */
+/* we can also simpy write nav a. */
+nav ul li a{
+    color: hotpink;
+}
+/* adjacent sibling combinator.underlying the h3 that comes after p tag*/
+p+h3{
+    text-decoration: underline;
+}
+h3+h3{
+    text-decoration: underline;
+}
+/* class selector+selector */
+.upvote+button{
+    background-color: cornflowerblue;
+}
+/* child combinator.It can only select direct child*/
+div>input{
+    background-color: darksalmon;
+}
+/* attribute selector */
+input[type="text"]{
+   color: green; 
+}
+input[type="password"]{
+    color: red;
+}
+/* we can also do it on presence ogf attrivute only without value */
+input[type]{
+    background-color: ghostwhite;
+}
+/* practice qn .two way using combination of selector*/
+#myId p{
+    color: green;
+}
+div[id="myId"] p{
+    color: green;
+}
+/* pseudo class. */
+/* hover pseudo class .note that it will not be 
+applied to log in and sign up botton due to specificity*/
+button:hover{
+    color: white;
+    background-color: black;
+}
+h3:hover{
+    text-decoration: none;
+}
+/* active pseudo class */
+button:active{
+    background-color: hotpink;
+    color: black;
+}
+p:active{
+   font-weight: bold;
+   color: green;
+
+}
+/* this will only change text color when clicked not a tag */
+/* .adam:active{
+    color: green;
+    font-weight: bold;
+
+} */
+/* :checked pseudo class */
+input[type="radio"]:checked+label{ 
+    color: red;
+    font-weight: bold;
+} 
+/* nth-of-type pseudo class */
+main>div:nth-of-type(2n ){
+    background-color: blanchedalmond;
+}  
+/* pseudo element */ 
+/* first-letter */
+h1::first-letter{
+    color: green;
+}
+/* first-line */
+p::first-line{
+    color: red;
+}
+/* selection pseudo element */
+p::selection{
+    background-color: rgb(199, 192, 58);
+}
